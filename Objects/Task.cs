@@ -76,7 +76,7 @@ namespace ToDoList.Objects
       SqlDataReader rdr = null;
       conn.Open();
 
-      SqlCommand cmd = new SqlCommand("SELECT * FROM tasks;", conn);
+      SqlCommand cmd = new SqlCommand("SELECT * FROM tasks ORDER BY due_date;", conn);
       rdr = cmd.ExecuteReader();
 
       while(rdr.Read())
